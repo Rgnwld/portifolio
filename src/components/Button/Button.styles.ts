@@ -10,13 +10,13 @@ export const Background = styled.div`
     font-size: 0.75rem;
 
     width: fit-content;
-    padding: 1rem 2rem;
-    margin: 1rem;
+    /* padding: 1rem 2rem; */
+    padding: 1rem;
 
-    ::selection {
+    *::selection {
         background: transparent;
     }
-    ::-moz-selection {
+    *::-moz-selection {
         background: transparent;
     }
 `;

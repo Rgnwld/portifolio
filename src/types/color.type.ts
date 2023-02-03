@@ -10,9 +10,10 @@ export interface IColor {
     font: {
         family: string;
     };
+    anim: { slower: string; slow: string; normal: string; fast: string; instant: string };
 }
 
 export type IThemeContext = {
     theme: IColor;
-    UpdateTheme: (color: IColor) => void;
+    UpdateTheme: (color: string) => void;
 };

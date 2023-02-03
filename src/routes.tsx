@@ -1,22 +1,42 @@
 import React, { useEffect } from 'react';
 import { ThemeProvider } from 'styled-components';
-import Button from './components/Button/Button';
-import Slider from './components/Slider/Slider';
 import { useCustomTheme } from './context/CustomThemeContext';
 import './defaultStyle.css';
+import HomePage from './pages/Home/Home.page';
+import { createBrowserRouter, RouterProvider, Route, Link } from 'react-router-dom';
+import { DefaultPage } from './components/DefaultPage/DefaultPage.style';
+import Header from './components/Header/Header';
+import Footer from './components/Footer/Footer';
 
 // import { Container } from './styles';
 
-const Routes: React.FC = () => {
+const DefaultPageConfiguration: React.FC = ({ children }) => {
     const { theme } = useCustomTheme();
 
     return (
         <ThemeProvider theme={theme}>
-            Components:
-            <Slider />
-            <Button>Button</Button>
+            <DefaultPage>
+                <Header />
+                {children}
+                <Footer />
+            </DefaultPage>
         </ThemeProvider>
     );
 };
 
-export default Routes;
+const router = createBrowserRouter([
+    {
+        path: '/',
+        element: (
+            <DefaultPageConfiguration>
+                <HomePage />
+            </DefaultPageConfiguration>
+        ),
+    },
+    {
+        path: 'about',
+        element: <div>About</div>,
+    },
+]);
+
+export default router;
