@@ -3,10 +3,11 @@
 
 * {
     font-family: 'Inter', sans-serif;
-    transition: all 0.2s ease, padding 0s, margin 0s, height 0s, width 0s;
 }
 
 body {
     padding: 0;
     margin: 0;
+
+    overflow: hidden;
 }

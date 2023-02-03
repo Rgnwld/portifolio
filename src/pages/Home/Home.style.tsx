@@ -28,14 +28,25 @@ export const Background = styled.div`
     }
 `;
 
-export const Title = styled.h1`
+export const Title = styled.a`
+    color: ${(props) => props.theme.color.secondary};
+    text-decoration: none;
     font-size: 3rem;
     font-weight: 800;
     margin: 0;
 `;
 
-export const Description = styled.h1`
+export const Description = styled.a`
+    text-decoration: none;
     font-size: 1.5rem;
     font-weight: 400;
     margin: 8px;
+    color: ${(props) => props.theme.color.secondary};
+`;
+
+export const HighlightContent = styled.span`
+    font-weight: 800;
+    text-decoration: underline;
+    transition: 0s all;
+    animation: ${fadeIn} ${(props) => props.theme.anim.slower} linear forwards;
 `;

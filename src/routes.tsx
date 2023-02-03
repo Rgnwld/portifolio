@@ -7,6 +7,7 @@ import { createBrowserRouter, RouterProvider, Route, Link } from 'react-router-d
 import { DefaultPage } from './components/DefaultPage/DefaultPage.style';
 import Header from './components/Header/Header';
 import Footer from './components/Footer/Footer';
+import AboutMe from './pages/AboutMe/About.page';
 
 // import { Container } from './styles';
 
@@ -35,7 +36,11 @@ const router = createBrowserRouter([
     },
     {
         path: 'about',
-        element: <div>About</div>,
+        element: (
+            <DefaultPageConfiguration>
+                <AboutMe />
+            </DefaultPageConfiguration>
+        ),
     },
 ]);
 
