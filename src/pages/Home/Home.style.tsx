@@ -1,4 +1,4 @@
-import styled, { keyframes } from 'styled-components';
+import styled, { keyframes } from "styled-components";
 
 const fadeIn = keyframes`
   0% {
@@ -15,38 +15,50 @@ const fadeIn = keyframes`
 `;
 
 export const Background = styled.div`
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 
-    height: 100%;
-    width: 100%;
+  height: 100%;
+  width: 100%;
 
-    & > * {
-        animation: ${fadeIn} ${(props) => props.theme.anim.slow} linear forwards;
-    }
+  & > * {
+    animation: ${fadeIn} ${(props) => props.theme.anim.slow} linear forwards;
+  }
 `;
 
 export const Title = styled.a`
-    color: ${(props) => props.theme.color.secondary};
-    text-decoration: none;
-    font-size: 3rem;
-    font-weight: 800;
-    margin: 0;
+  color: ${(props) => props.theme.color.secondary};
+  text-decoration: none;
+  font-size: 3rem;
+  font-weight: 800;
+  margin: 0;
+
+  @media (max-width: 1399px) {
+    &{
+      font-size: 2.5rem
+    }
+  }
 `;
 
 export const Description = styled.a`
-    text-decoration: none;
-    font-size: 1.5rem;
-    font-weight: 400;
-    margin: 8px;
-    color: ${(props) => props.theme.color.secondary};
+  text-decoration: none;
+  font-size: 1.5rem;
+  font-weight: 400;
+  margin: 8px;
+  color: ${(props) => props.theme.color.secondary};
+
+  @media (max-width: 1399px) {
+    &{
+      font-size: 1.25rem
+    }
+  }
 `;
 
 export const HighlightContent = styled.span`
-    font-weight: 800;
-    text-decoration: underline;
-    transition: 0s all;
-    animation: ${fadeIn} ${(props) => props.theme.anim.slower} linear forwards;
+  font-weight: 800;
+  text-decoration: underline;
+  transition: 0s all;
+  animation: ${fadeIn} ${(props) => props.theme.anim.slower} linear forwards;
 `;

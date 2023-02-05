@@ -18,6 +18,11 @@ export const HeaderContainer = styled.div`
     justify-content: space-between;
     padding: 1rem;
     animation: ${fadeIn} ${(props) => props.theme.anim.slower} linear forwards;
+    @media (max-width: 1399px) {
+    &{
+      font-size: .75rem
+    }
+  }
 `;
 
 export const Containers = styled.div`

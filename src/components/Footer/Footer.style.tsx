@@ -17,7 +17,12 @@ const fadeIn = keyframes`
 export const FooterContainer = styled.div`
     padding: 1rem;
     animation: ${fadeIn} ${(props) => props.theme.anim.slower} linear forwards;
-    /* font-family: roboto; */
+  /* font-family: roboto; */
+  @media (max-width: 1399px) {
+    &{
+      font-size: 0.75rem
+    }
+  }
 `;
 
 export const InfoContainer = styled.div``;
