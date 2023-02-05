@@ -7,7 +7,7 @@ export const Background = styled.div`
     cursor: pointer;
 
     font-weight: 600;
-    font-size: 0.75rem;
+    font-size: 1rem;
 
     width: fit-content;
     /* padding: 1rem 2rem; */

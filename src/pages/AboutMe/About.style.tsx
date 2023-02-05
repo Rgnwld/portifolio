@@ -61,7 +61,7 @@ export const Title = styled.h1`
 `;
 
 export const Description = styled.span`
-  width: 40em;
+  width: 30em;
   font-size: 1.15rem;
   /* line-height: 1.5rem; */
   font-weight: 400;
@@ -82,9 +82,9 @@ export const HighlightContent = styled.span`
 
 export const MyImage = styled.img`
   width: 30rem;
-  filter: grayscale(100);
-
   animation: ${fadeIn} ${(props) => props.theme.anim.slower} linear forwards;
+  border: solid 4px ${(props) => props.theme.color.secondary};
+  border-radius: 8px;
 
   @media (max-width: 1399px) {
     & {

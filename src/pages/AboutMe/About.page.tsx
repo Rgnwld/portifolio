@@ -1,5 +1,4 @@
 import React from "react";
-import NewContent from "../../components/NewContent/NewContent";
 import {
   Background,
   Description,
@@ -8,11 +7,16 @@ import {
   Title,
   MyImage,
 } from "./About.style";
-import MeImg from "../../imgs/me.png";
+
+import MeLightImg from "../../imgs/me.lightmode.svg";
+import MeDarkImg from "../../imgs/me.darkmode.svg";
+import { useCustomTheme } from "../../context/CustomThemeContext";
 
 // import { Container } from './styles';
 
 const AboutMe: React.FC = () => {
+  const { theme } = useCustomTheme();
+
   return (
     <Background>
       <SidedContainer>
@@ -33,7 +37,10 @@ const AboutMe: React.FC = () => {
         </Description>
       </SidedContainer>
       <SidedContainer>
-        <MyImage src={MeImg} alt="placeholder"></MyImage>
+        <MyImage
+          src={theme.name == "darkMode" ? MeDarkImg : MeLightImg}
+          alt="placeholder"
+        ></MyImage>
       </SidedContainer>
     </Background>
   );
