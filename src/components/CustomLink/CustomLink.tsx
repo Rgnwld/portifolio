@@ -3,8 +3,16 @@ import { CustomLinkSpan } from './CustomLink.style';
 
 // import { Container } from './styles';
 
-const CustomLink: React.FC<{ href?: string; children: string | ReactNode }> = ({ children, href }) => {
-    return <CustomLinkSpan href={href}>{children}</CustomLinkSpan>;
+const CustomLink: React.FC<{ href?: string; children: string | ReactNode; target?: string }> = ({
+    children,
+    href,
+    target,
+}) => {
+    return (
+        <CustomLinkSpan href={href} target={target}>
+            {children}
+        </CustomLinkSpan>
+    );
 };
 
 export default CustomLink;

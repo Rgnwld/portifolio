@@ -15,8 +15,12 @@ const Header: React.FC = () => {
                 <CustomLink href="/">Home</CustomLink>
                 <CustomLink href="About">About me</CustomLink>
                 <CustomLink href="Projects">Projects</CustomLink>
-                <CustomLink href="teste">Github</CustomLink>
-                <CustomLink href="teste">Linkedin</CustomLink>
+                <CustomLink href="https://github.com/Rgnwld" target="_blank">
+                    Github
+                </CustomLink>
+                <CustomLink href="https://www.linkedin.com/in/rgnwld/" target="_blank">
+                    Linkedin
+                </CustomLink>
             </Containers>
         </HeaderContainer>
     );
