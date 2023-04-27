@@ -6,7 +6,7 @@ import { Background, Description, HighlightContent, Title } from './Home.style';
 const HomePage: React.FC = () => {
     return (
         <Background>
-            <Title href="about"> Olá! Eu sou o Reginaldo.</Title>
+            <Title href="about" > Olá! Eu sou o Reginaldo.</Title>
             <Description href="about">
                 Sou desenvolvedor <HighlightContent>Front-End</HighlightContent>
             </Description>

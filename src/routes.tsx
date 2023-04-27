@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import { ThemeProvider } from 'styled-components';
 import { useCustomTheme } from './context/CustomThemeContext';
 import HomePage from './pages/Home/Home.page';
-import { createBrowserRouter, RouterProvider, Route, Link } from 'react-router-dom';
+import { createBrowserRouter, RouterProvider, Route, Link, createHashRouter } from 'react-router-dom';
 import { DefaultPage } from './components/DefaultPage/DefaultPage.style';
 import Header from './components/Header/Header';
 import Footer from './components/Footer/Footer';
@@ -26,6 +26,33 @@ const DefaultPageConfiguration: React.FC = ({ children }) => {
         </ThemeProvider>
     );
 };
+
+const routerHS = createHashRouter([
+    {
+        path: '/',
+        element: (
+            <DefaultPageConfiguration>
+                <HomePage />
+            </DefaultPageConfiguration>
+        ),
+    },
+    {
+        path: 'about',
+        element: (
+            <DefaultPageConfiguration>
+                <AboutMe />
+            </DefaultPageConfiguration>
+        ),
+    },
+    {
+        path: 'projects',
+        element: (
+            <DefaultPageConfiguration>
+                <Projects />
+            </DefaultPageConfiguration>
+        ),
+    },
+]);
 
 const router = createBrowserRouter([
     {

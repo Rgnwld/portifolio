@@ -1,6 +1,6 @@
 import React from 'react';
 import { CustomThemeProvider } from './context/CustomThemeContext';
-import { RouterProvider } from 'react-router-dom';
+import { RouterProvider, HashRouter } from 'react-router-dom';
 import router from './routes';
 
 const Root: React.FC = () => {
