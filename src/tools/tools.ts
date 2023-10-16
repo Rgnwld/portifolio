@@ -2,7 +2,7 @@ import { ITools } from '../types/project.type';
 import ReactIcon from '../imgs/icons8-react-40.png';
 import TSIcon from '../imgs/icons8-typescript-48.png';
 import HtmlIcon from '../imgs/icons8-html-5-48.png';
-import SCIcon from '../imgs/styled-Components.png';
+import SCIcon from '../imgs/styled-components.png';
 
 const ReactTool: ITools = {
     icon: ReactIcon,
